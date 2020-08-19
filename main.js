@@ -1,8 +1,10 @@
 const formAdd = document.querySelector('.add');
 const inputAdd = document.querySelector('.add input');
 const inputSearch = document.querySelector('.search');
-const taskCounter = document.querySelector('h1 span');
+let taskCounter = document.querySelector('h1 span');
 const tasksList = document.querySelector('ul');
+const items = document.getElementsByClassName('task')
+
 
 const addTask = (e) => {
     e.preventDefault();
@@ -12,7 +14,8 @@ const addTask = (e) => {
     task.className = 'task';
     task.innerHTML = newTaskName + '<button>delete</button>';
     tasksList.appendChild(task);
-    inputAdd.value = ""
+    inputAdd.value = "";
+    taskCounter.textContent = items.length
 }
 
 
