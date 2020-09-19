@@ -4,11 +4,20 @@ const inputSearch = document.querySelector('.search');
 let taskCounter = document.querySelector('h1 span');
 const tasksList = document.querySelector('ul');
 const items = document.getElementsByClassName('task');
+const toDoListArr = [];
+
+
 
 
 const removeTask = (e) => {
     e.target.parentNode.remove();
-    taskCounter.textContent = items.length;
+    taskCounter.textContent = toDoListArr.length;
+    const index = e.target.parentNode.dataset.key;
+    toDoListArr.splice(index, 1);
+    console.log(toDoListArr);
+    taskCounter.textContent = toDoListArr.length;
+    inputSearch.value = "";
+    renderList();
 }
 
 const addTask = (e) => {
@@ -18,11 +27,35 @@ const addTask = (e) => {
     const task = document.createElement('li');
     task.className = 'task';
     task.innerHTML = newTaskName + '<button>delete</button>';
+    toDoListArr.push(task);
     tasksList.appendChild(task);
+    renderList();
     inputAdd.value = "";
     taskCounter.textContent = items.length;
-    task.querySelector('button').addEventListener('click', removeTask)
+    task.querySelector('button').addEventListener('click', removeTask);
 }
 
+const searchTask = (e) => {
+    const serachTask = e.target.value.toLowerCase();
+    let tasks = toDoListArr;
+    tasks = tasks.filter(li =>
+        li.textContent.toLocaleLowerCase().includes(serachTask)
+    );
+    tasksList.textContent = "";
+    tasks.forEach(li => tasksList.appendChild(li));
+    console.log(tasks);
+    taskCounter.textContent = items.length;
+
+
+}
+const renderList = () => {
+    tasksList.textContent = "";
+    toDoListArr.forEach((toDoElem, key) => {
+        toDoElem.dataset.key = key;
+        tasksList.appendChild(toDoElem);
+    });
+};
+
+inputSearch.addEventListener('input', searchTask);
 
 formAdd.addEventListener('submit', addTask)
