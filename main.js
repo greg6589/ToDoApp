@@ -4,6 +4,8 @@ const inputSearch = document.querySelector('.search');
 let taskCounter = document.querySelector('h1 span');
 const tasksList = document.querySelector('ul');
 const items = document.getElementsByClassName('task');
+const hourDisp = document.querySelector('.hour span');
+const dateDisp = document.querySelector('.date span');
 const toDoListArr = [];
 
 
@@ -59,3 +61,20 @@ const renderList = () => {
 inputSearch.addEventListener('input', searchTask);
 
 formAdd.addEventListener('submit', addTask)
+
+// time and date
+const clock = () => {
+    const time = new Date();
+
+    let seconds = time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds();
+    let minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
+    let hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
+    const month = time.toLocaleString('default', {
+        month: 'short'
+    })
+
+    hourDisp.textContent = `${hours}:${minutes}:${seconds}`
+    dateDisp.textContent = `${time.getDate()} ${month.toUpperCase()}`
+
+}
+setInterval(clock, 1000)
