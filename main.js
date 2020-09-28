@@ -69,12 +69,13 @@ const clock = () => {
     let seconds = time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds();
     let minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes();
     let hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours();
+    let year = time.getFullYear();
     const month = time.toLocaleString('default', {
         month: 'short'
     })
 
     hourDisp.textContent = `${hours}:${minutes}:${seconds}`
-    dateDisp.textContent = `${time.getDate()} ${month.toUpperCase()}`
+    dateDisp.textContent = `${time.getDate()} ${month.toUpperCase()} ${year}`
 
 }
 setInterval(clock, 1000)
