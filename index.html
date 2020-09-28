@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDoApp</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>ToDoApp</title>
-</head>
+  <body>
+    <section class="wrapper">
+      <header>
+        <h1>
+          Your<br />
+          Things
+        </h1>
+        <div class="dateWrapp">
+          <div class="date"><span></span></div>
+          <div class="hour"><span></span></div>
+        </div>
+      </header>
+      <section>
+        <form class="add" action="">
+          <input type="text" placeholder="task name" />
+          <button>Add Task</button>
+        </form>
+        <form action="">
+          <input class="search" type="text" placeholder="search" />
+        </form>
 
-<body>
-  <section class="wrapper">
-    <header>
-      <div class="date"><span></span></div>
-      <div class="hour"><span></span></div>
-      <h1>To Do List</h1>
-    </header>
-    <section>
-      <form class="add" action="">
-        <input type="text" placeholder="task name" />
-        <button>Add Task</button>
-      </form>
-      <form action="">
-        <input class="search" type="text" placeholder="search" />
-      </form>
-
-      <h1>Tasks count: <span>0</span></h1>
-      <ul></ul>
+        <h1>Tasks count: <span>0</span></h1>
+        <ul></ul>
+      </section>
+      <script src="main.js"></script>
     </section>
-    <script src="main.js"></script>
-  </section>
-</body>
-
+  </body>
 </html>
