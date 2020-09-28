@@ -95,7 +95,7 @@ header h1 {
 
 .activeInput {
     position: fixed;
-    bottom: 7%;
+    bottom: 50px;
     right: 5%;
     font-size: 26px;
     height: 40px;
@@ -110,14 +110,14 @@ header h1 {
     bottom: 5px;
     right: 5%;
     width: 100%;
-    text-align: right;
+    text-align: left;
     width: 90%;
     font-size: 26px;
 }
 
 .activeSearch {
     position: fixed;
-    bottom: 15%;
+    bottom: 100px;
     right: 5%;
     font-size: 26px;
     height: 40px;
