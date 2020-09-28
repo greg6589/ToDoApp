@@ -7,6 +7,8 @@ const items = document.getElementsByClassName('task');
 const hourDisp = document.querySelector('.hour span');
 const dateDisp = document.querySelector('.date span');
 const toDoListArr = [];
+const btnAdd = document.querySelector('.activeInput');
+const btnSearch = document.querySelector('.activeSearch');
 
 
 
@@ -79,3 +81,17 @@ const clock = () => {
 
 }
 setInterval(clock, 1000)
+
+const addTaskInputActivator = () => {
+    formAdd.classList.toggle("active");
+    inputSearch.classList.add("active");
+}
+
+btnAdd.addEventListener('click', addTaskInputActivator)
+
+const searchTaskInputActivator = () => {
+    inputSearch.classList.toggle("active")
+    formAdd.classList.add("active");
+}
+
+btnSearch.addEventListener('click', searchTaskInputActivator)
