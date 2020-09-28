@@ -13,16 +13,54 @@ header {
     background-position: center;
     background-size: cover;
     height: 25vh;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+.dateWrapp {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    background-color: rgba(30, 30, 30, 30%);
+    color: white;
+    height: 25vh;
+    font-size: 20px;
+}
+
+.date {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.hour {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 
 section {
     margin-top: 25vh;
 }
 
+
+
 header h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 25vh;
     font-size: 40px;
-    margin: 5%;
-    text-align: center;
+    color: white;
+    padding: 10% 0% 0% 6%;
+    text-align: left;
+    line-height: 45px;
 
 }
 
