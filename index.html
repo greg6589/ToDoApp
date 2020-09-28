@@ -23,14 +23,16 @@
           <div class="hour"><span></span></div>
         </div>
       </header>
-      <section>
-        <form class="add" action="">
+      <section class="main">
+        <form class="add active" action="">
           <input type="text" placeholder="task name" />
-          <button>Add Task</button>
+          <button>Add</button>
         </form>
-        <form action="">
-          <input class="search" type="text" placeholder="search" />
+        <button class="activeInput">+</button>
+        <form class="search active" action="">
+          <input type="text" placeholder="search" />
         </form>
+        <button class="activeSearch">Q</button>
 
         <h1>Tasks count: <span>0</span></h1>
         <ul></ul>
