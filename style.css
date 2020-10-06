@@ -1,127 +1,192 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans Condensed", sans-serif
 }
 
 /* header */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-image: url(img/background.jpg);
-    background-position: center;
-    background-size: cover;
-    height: 160px;
-    font-family: 'Open Sans Condensed', sans-serif;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url(img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 160px;
+  font-family: "Open Sans Condensed", sans-serif;
 }
 
 .dateWrapp {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40%;
-    background-color: rgba(30, 30, 30, 30%);
-    color: white;
-    height: 160px;
-    font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  background-color: rgba(30, 30, 30, 30%);
+  color: white;
+  height: 160px;
+  font-size: 20px;
 }
 
 .date {
-    position: absolute;
-    top: 30%;
-    left: 0;
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .hour {
-    position: absolute;
-    top: 60%;
-    left: 0;
-    width: 100%;
-    text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
-
-
 
 header h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60%;
-    height: 160px;
-    font-size: 40px;
-    color: white;
-    padding: 10% 0% 0% 6%;
-    text-align: left;
-    line-height: 45px;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 160px;
+  font-size: 40px;
+  color: white;
+  padding: 10% 0% 0% 6%;
+  text-align: left;
+  line-height: 45px;
 }
-
 
 /* section input task and search */
 .main {
-    margin-top: 160px;
+  margin-top: 200px;
 }
 
-.active {
-    display: none;
-    background-color: saddlebrown;
-}
+
 
 .add {
-    position: absolute;
-    bottom: 5px;
-    right: 5%;
-    width: 100%;
-    text-align: right;
-
+  position: fixed;
+  bottom: 5px;
+  left: 2%;
+  width: 96%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add input {
-    width: 75%;
-    font-size: 26px;
-
+  width: 86%;
+  font-size: 26px;
+  border: 2px solid rgb(57, 110, 255);
+  border-radius: 5px;
+  outline: none;
+  box-shadow: -2px 4px 12px -1px rgb(57, 110, 255);
+  padding-left: 7px;
 }
 
+
+
 .add button {
-    font-size: 20px;
-    line-height: 26px;
-    padding: 0px 5px
+  font-size: 20px;
+  color: white;
+  line-height: 26px;
+  padding: 5px 8px;
+  border: 2px solid rgb(57, 110, 255);
+  border-radius: 5px;
+  background-color: rgb(57, 110, 255);
+  box-shadow: -2px 4px 12px -1px rgb(57, 110, 255);
 }
 
 .activeInput {
-    position: fixed;
-    bottom: 50px;
-    right: 5%;
-    font-size: 26px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 2px solid black;
+  outline: none;
+  position: fixed;
+  bottom: 50px;
+  right: 2%;
+  font-size: 26px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid rgb(57, 110, 255);
+  background-color: rgb(57, 110, 255);
+  color: white;
+  transition: 0.5s;
+}
+
+.animation {
+  background-color: rgb(246, 22, 22);
+  transform: rotate(135deg);
 }
 
 .search input {
+  position: fixed;
+  bottom: 5px;
+  left: 2%;
+  width: 96%;
+  font-size: 26px;
+  border: 2px solid rgb(248, 102, 17);
+  border-radius: 5px;
+  outline: none;
+  box-shadow: -2px 4px 12px -1px rgb(248, 102, 17);
+  padding-left: 7px;
 
-    position: absolute;
-    bottom: 5px;
-    right: 5%;
-    width: 100%;
-    text-align: left;
-    width: 90%;
-    font-size: 26px;
 }
 
 .activeSearch {
-    position: fixed;
-    bottom: 100px;
-    right: 5%;
-    font-size: 26px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 2px solid black;
+  outline: none;
+  position: fixed;
+  bottom: 100px;
+  right: 2%;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid rgb(248, 102, 17);
+  background-color: rgb(248, 102, 17);
+
+}
+
+.active {
+  display: none;
+}
+
+/* task list ul */
+
+.ulWrapp {
+  width: 100%;
+
+}
+
+.ulWrapp ul {
+  padding: 20px;
+  width: 90%;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  box-shadow: -2px 4px 12px -1px #afafaf;
+  padding: 5px;
+  height: 5%;
+}
+
+li input {
+  width: 20px;
+  height: 20px;
+}
+
+.main h1 {
+  position: fixed;
+  top: 160px;
+  left: 0;
+  width: 100%;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-size: 24px;
+  padding: 5px 20px;
 }
