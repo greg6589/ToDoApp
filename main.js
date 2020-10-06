@@ -14,15 +14,19 @@ const btnSearch = document.querySelector('.activeSearch');
 
 
 const removeTask = (e) => {
-    e.target.parentNode.remove();
-    taskCounter.textContent = toDoListArr.length;
-    const index = e.target.parentNode.dataset.key;
-    toDoListArr.splice(index, 1);
-    console.log(toDoListArr);
-    taskCounter.textContent = toDoListArr.length;
-    inputSearch.value = "";
-    renderList();
+    e.target.parentNode.style.textDecorationLine = "line-through";
+    setTimeout(() => {
+        e.target.parentNode.remove();
+        taskCounter.textContent = toDoListArr.length;
+        const index = e.target.parentNode.dataset.key;
+        toDoListArr.splice(index, 1);
+        taskCounter.textContent = toDoListArr.length;
+        inputSearch.value = "";
+        renderList();
+    }, 700);
+
 }
+
 
 const addTask = (e) => {
     e.preventDefault();
@@ -30,13 +34,13 @@ const addTask = (e) => {
     if (newTaskName === "") return;
     const task = document.createElement('li');
     task.className = 'task';
-    task.innerHTML = newTaskName + '<button>delete</button>';
+    task.innerHTML = newTaskName + '<input type="checkbox">';
     toDoListArr.push(task);
     tasksList.appendChild(task);
     renderList();
     inputAdd.value = "";
     taskCounter.textContent = items.length;
-    task.querySelector('button').addEventListener('click', removeTask);
+    task.querySelector('input').addEventListener('click', removeTask);
 }
 
 const searchTask = (e) => {
@@ -49,6 +53,7 @@ const searchTask = (e) => {
     tasks.forEach(li => tasksList.appendChild(li));
     console.log(tasks);
     taskCounter.textContent = items.length;
+    console.log(inputSearch.value)
 
 
 }
@@ -85,6 +90,7 @@ setInterval(clock, 1000)
 const addTaskInputActivator = () => {
     formAdd.classList.toggle("active");
     inputSearch.classList.add("active");
+    btnAdd.classList.toggle("animation");
 }
 
 btnAdd.addEventListener('click', addTaskInputActivator)
@@ -92,6 +98,7 @@ btnAdd.addEventListener('click', addTaskInputActivator)
 const searchTaskInputActivator = () => {
     inputSearch.classList.toggle("active")
     formAdd.classList.add("active");
+    btnAdd.classList.remove("animation");
 }
 
 btnSearch.addEventListener('click', searchTaskInputActivator)
