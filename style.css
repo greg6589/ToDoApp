@@ -71,6 +71,31 @@ header h1 {
 
 }
 
+@media (min-width: 568px) and (orientation: landscape) {
+  header {
+    height: 120px;
+  }
+
+  .dateWrapp {
+    height: 120px;
+  }
+
+  header h1 {
+    height: 140px;
+    padding: 2% 0% 0% 6%;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  header h1 {
+    font-size: 40px;
+    padding: 3% 0% 0% 6%;
+    line-height: 40px;
+  }
+}
+
+
+
 /* section input task and search */
 .main {
   margin-top: 200px;
@@ -199,11 +224,57 @@ header h1 {
   }
 }
 
+@media (min-width: 568px) and (orientation: landscape) {
+  .main {
+    margin-top: 160px;
+  }
+
+  .add {
+    bottom: 15px;
+  }
+
+  .add input {
+    width: 89%;
+  }
+
+  .activeInput {
+    bottom: 60px;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+  }
+
+  .search input {
+    bottom: 15px;
+  }
+
+  .activeSearch {
+    bottom: 115px;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .add input {
+    width: 91%;
+  }
+
+  .activeInput {
+    bottom: 70px;
+  }
+
+  .activeSearch {
+    bottom: 125px;
+  }
+
+}
+
 /* task list ul */
 
 .ulWrapp {
   width: 100%;
-
 }
 
 .ulWrapp ul {
@@ -260,5 +331,30 @@ li input {
   .main h1 {
     font-size: 32px;
     padding: 10px 40px;
+  }
+}
+
+@media (min-width: 568px) and (orientation: landscape) {
+  .main h1 {
+    top: 120px;
+  }
+}
+
+@media (min-width: 812px) and (orientation: landscape) {
+  .main h1 {
+    top: 120px;
+    font-size: 24px;
+    padding: 5px 40px;
+  }
+
+  .ulWrapp ul {
+    padding: 30px;
+    width: 92%;
+  }
+
+  li {
+    font-size: 28px;
+    margin-bottom: 15px;
+    padding: 8px;
   }
 }
