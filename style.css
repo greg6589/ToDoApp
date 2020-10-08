@@ -58,12 +58,23 @@ header h1 {
   line-height: 45px;
 }
 
+@media (min-width: 768px) {
+  .dateWrapp {
+    font-size: 32px;
+  }
+
+  header h1 {
+    font-size: 60px;
+    padding: 3% 0% 0% 6%;
+    line-height: 60px;
+  }
+
+}
+
 /* section input task and search */
 .main {
   margin-top: 200px;
 }
-
-
 
 .add {
   position: fixed;
@@ -84,8 +95,6 @@ header h1 {
   box-shadow: -2px 4px 12px -1px rgb(57, 110, 255);
   padding-left: 7px;
 }
-
-
 
 .add button {
   font-size: 20px;
@@ -129,7 +138,6 @@ header h1 {
   outline: none;
   box-shadow: -2px 4px 12px -1px rgb(248, 102, 17);
   padding-left: 7px;
-
 }
 
 .activeSearch {
@@ -144,11 +152,51 @@ header h1 {
   border-radius: 50%;
   border: 2px solid rgb(248, 102, 17);
   background-color: rgb(248, 102, 17);
-
 }
 
 .active {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-top: 220px;
+  }
+
+  .add {
+    bottom: 25px;
+  }
+
+  .add input {
+    width: 90%;
+    font-size: 32px;
+  }
+
+  .add button {
+    font-size: 32px;
+    line-height: 32px;
+    padding: 7px 10px;
+  }
+
+  .activeInput {
+    bottom: 100px;
+    font-size: 40px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .search input {
+    bottom: 25px;
+    font-size: 32px;
+  }
+
+  .activeSearch {
+    bottom: 170px;
+    font-size: 40px;
+    height: 60px;
+    width: 60px;
+
+  }
 }
 
 /* task list ul */
@@ -189,4 +237,28 @@ li input {
   background-color: rgb(0, 0, 0);
   font-size: 24px;
   padding: 5px 20px;
+}
+
+@media (min-width: 768px) {
+
+  .ulWrapp ul {
+    padding: 40px;
+    width: 94%;
+  }
+
+  li {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding: 8px;
+  }
+
+  li input {
+    width: 25px;
+    height: 25px;
+  }
+
+  .main h1 {
+    font-size: 32px;
+    padding: 10px 40px;
+  }
 }
