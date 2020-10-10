@@ -2,7 +2,7 @@ const formAdd = document.querySelector(".add");
 const inputAdd = document.querySelector(".add input");
 const inputSearch = document.querySelector(".search");
 const inputSearchValue = document.querySelector(".search input");
-let taskCounter = document.querySelector("h1 span");
+let taskCounter = document.querySelector(".counter span");
 const tasksList = document.querySelector("ul");
 const items = document.getElementsByClassName("task");
 const hourDisp = document.querySelector(".hour span");
@@ -48,7 +48,6 @@ const searchTask = (e) => {
   tasksList.textContent = "";
   tasks.forEach((li) => tasksList.appendChild(li));
   taskCounter.textContent = items.length;
-  console.log(inputSearch.value);
 };
 const renderList = () => {
   tasksList.textContent = "";
