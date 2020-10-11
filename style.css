@@ -136,7 +136,7 @@ header h1 span{
   font-size: 26px;
   border: 2px solid rgb(57, 110, 255);
   border-radius: 5px;
-  outline: none;
+  outline-color: rgb(57, 110, 255);
   box-shadow: -2px 4px 12px -1px rgb(57, 110, 255);
   padding-left: 7px;
 }
@@ -153,7 +153,7 @@ header h1 span{
 }
 
 .activeInput {
-  outline: none;
+  outline-color: rgb(57, 110, 255);
   position: fixed;
   bottom: 50px;
   right: 2%;
@@ -180,13 +180,13 @@ header h1 span{
   font-size: 26px;
   border: 2px solid rgb(248, 102, 17);
   border-radius: 5px;
-  outline: none;
+  outline-color: rgb(248, 102, 17);
   box-shadow: -2px 4px 12px -1px rgb(248, 102, 17);
   padding-left: 7px;
 }
 
 .activeSearch {
-  outline: none;
+  outline-color: rgb(248, 102, 17);
   position: fixed;
   bottom: 100px;
   right: 2%;
