@@ -10,6 +10,9 @@ const dateDisp = document.querySelector(".date span");
 const toDoListArr = [];
 const btnAdd = document.querySelector(".activeInput");
 const btnSearch = document.querySelector(".activeSearch");
+const alert = document.querySelector(".alert");
+const alertOff = document.querySelector(".alertOff")
+
 
 const removeTask = (e) => {
   e.target.parentNode.style.textDecorationLine = "line-through";
@@ -27,7 +30,10 @@ const removeTask = (e) => {
 const addTask = (e) => {
   e.preventDefault();
   let newTaskName = inputAdd.value;
-  if (newTaskName === "") return;
+  if (newTaskName === "") {
+    alert.classList.add("activeAlert")
+    return;
+  };
   const task = document.createElement("li");
   task.className = "task";
   task.innerHTML = newTaskName + '<input type="checkbox">';
@@ -57,9 +63,15 @@ const renderList = () => {
   });
 };
 
+const deactivateAlert= () =>{
+  alert.classList.remove("activeAlert")
+}
+
 inputSearch.addEventListener("input", searchTask);
 
 formAdd.addEventListener("submit", addTask);
+
+alertOff.addEventListener("click", deactivateAlert);
 
 // time and date
 

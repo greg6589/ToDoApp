@@ -428,3 +428,41 @@ li input {
     padding: 5px 20px;
   }
 }
+/* alert */
+.alert{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(79, 126, 255);
+  width: 300px;
+  height: 100px;
+  border-radius:10px;
+  display: none;
+}
+.alert p{
+  font-size: 28px;
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  color: white;
+
+}
+.alertOff{
+  position: absolute;
+  top: 0;
+  right:0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(246, 22, 22);
+  background-color:rgb(246, 22, 22) ;
+ }
+.fa-times{
+  font-size: 28px;
+  line-height: 28px;
+  color: white;
+}
+.activeAlert{
+  display: block;
+}
