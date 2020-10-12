@@ -21,17 +21,21 @@
       </div>
     </header>
     <main class="main">
-      <form class="add active" action="">
-        <input type="text" placeholder="task name" />
+      <label  action="">
+        <span class="add-text a11y-only">Add task</span>
+        <form class="add active" action="">
+        <input type="text" placeholder="task name"/>
         <button>Add</button>
-      </form>
+        </form>
+      </label>
        <button class="activeInput"><span class="icon">
         <span class="fas fa-plus" data-icon="plus" aria-hidden="true"></span>
       </span></button>
 
-      <div class="search active" action="">
+      <label class="search active" action="">
+        <span class="search-text a11y-only">Search</span>
         <input type="text" placeholder="search" />
-      </div>
+      </label>
       <button class="activeSearch"><span class="icon">
         <span class="fas fa-search" data-icon="loupe" aria-hidden="true"></span>
       </span></button>
